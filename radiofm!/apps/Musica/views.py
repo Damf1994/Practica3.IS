@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from django.views.generic.base import TemplateView
 # Create your views here.
 
 
@@ -13,3 +14,16 @@ def top_songs(request):
 		"<head><title>Canciones populares</title></head>"
         "<body><h1>Estas son las canciones populares:</h1></body>"
         )
+
+
+
+class IndexView(TemplateView):
+	
+	template_name = 'Musica/index.html'
+	
+
+
+class Top_SongsView(TemplateView):
+	
+	template_name = 'Musica/top_songs.html'
+	

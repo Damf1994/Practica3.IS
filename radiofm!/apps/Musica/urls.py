@@ -1,9 +1,9 @@
 from django.urls import path
 
-from . import views
+from apps.Musica.views import IndexView, Top_SongsView 
 
 urlpatterns = [
-    path('', views.index, name='index'),
-    path('top', views.top_songs, name='top_songs'),
+    path('', IndexView.as_view(), name='index'),
+    path('top', Top_SongsView.as_view(), name='top_songs'),
 
 ]
