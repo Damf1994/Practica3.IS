@@ -8,7 +8,16 @@
 
 <h1>RadioFm!!</h1>
 
-
+<div class="rec-division">
+    <h2>Artists</h2>
+    <ul>
+        {% for artist in artists %}
+        <li>
+            <a href="{% url 'musica:artist' artist.id %}">{{ artist.name }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
 
 
 {% endblock %}
